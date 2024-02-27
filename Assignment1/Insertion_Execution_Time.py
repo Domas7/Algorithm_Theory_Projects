@@ -27,3 +27,4 @@ for size in input_sizes:
     print("Size: ", size)
     print("Number of steps: ", steps)
     print("Time taken: ", end_time, "seconds")
+    
