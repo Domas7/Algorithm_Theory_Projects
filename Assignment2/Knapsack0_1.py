@@ -21,10 +21,10 @@ def knapsack_0_1(n, W):
 
     for i in range(1, n + 1): # i is the number of items
         for j in range(1, W + 1): # j is the weight
-            if j < kg[i - 1]: # if the weight of the item is greater than the weight of the knapsack
-                K[i][j] = K[i - 1][j] # then the value of the knapsack is the same as the previous value
-            else: # if the weight of the item is less than the weight of the knapsack
-                K[i][j] = max(K[i - 1][j], K[i - 1][j - kg[i - 1]] + price[i - 1]) # then the value of the knapsack is the maximum of the previous value and the value of the knapsack with the item included
+            if j < kg[i - 1]:
+                K[i][j] = K[i - 1][j] 
+            else: 
+                K[i][j] = max(K[i - 1][j], K[i - 1][j - kg[i - 1]] + price[i - 1]) 
     
     print("Selected items:")
     i, j = n, W

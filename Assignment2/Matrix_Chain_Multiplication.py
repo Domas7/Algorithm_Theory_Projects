@@ -1,16 +1,15 @@
 
 
-# Goal is to determine an order for multiplying matrices that has the lowest cost
-
 # 1. Characterize the structure of an optimal solution
 # 2. Recursively define the value of an optimal solution
 # 3. Compute the value of an optimal solution
 # 4. Construct an optimal solution from computed information
+
+# Goal is to determine an order for multiplying matrices that has the lowest cost
 import sys
-def matrix_chain_order(p): # Function to determine the order of multiplying matrices that has the lowest cost
+def matrix_chain_order(p):
     
     n = len(p)
-    print(n)
     m = [[0 for x in range(n)] for y in range(n)]
     s = [[0 for x in range(n)] for y in range(n)]
 
@@ -27,8 +26,14 @@ def matrix_chain_order(p): # Function to determine the order of multiplying matr
                     s[i][j] = k
     return m[1][n - 1]
 
-#array = [1, 3, 4, 2, 3]
-# Input for array
-array = [1, 2, 3, 4, 3]
-print("Minimum number of multiplications is", str(matrix_chain_order(array)))
+
+
+
+
+
+# Example
+array1 = [10, 100, 5, 50]
+array2 = [30, 35, 15, 5, 10, 20, 25]
+print("Minimum number of multiplications of array1 is", str(matrix_chain_order(array1)))
+print("Minimum number of multiplications of array2 is", str(matrix_chain_order(array2)))
 
